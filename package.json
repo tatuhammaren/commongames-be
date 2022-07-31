@@ -1,0 +1,26 @@
+{
+  "name": "commongames-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint ."
+  },
+  "author": "Tatu Hammarén",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^7.0.0",
+    "@fastify/static": "^5.0.0",
+    "dotenv": "^16.0.1",
+    "fastify": "^3.29.0",
+    "steamapi": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.16"
+  }
+}
