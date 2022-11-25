@@ -1,4 +1,4 @@
-const getData = require('./service.js');
+const getData = require('./service');
 
 async function routes(fastify) {
   fastify.post('/gamers', async (request, reply) => {
@@ -9,4 +9,4 @@ async function routes(fastify) {
   });
 }
 
-module.exports = routes
+module.exports = routes;

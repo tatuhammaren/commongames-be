@@ -1,5 +1,5 @@
-const SteamAPI = require( 'steamapi');
-const  config = require( './utils/config.js');
+const SteamAPI = require('steamapi');
+const config = require('./utils/config.js');
 
 const steam = new SteamAPI(config.STEAM_API_KEY);
 
@@ -23,4 +23,4 @@ async function getUserData(id) {
   return data;
 }
 
-module.exports = {getUserId, getUserGames, getUserData}
+module.exports = { getUserId, getUserGames, getUserData };

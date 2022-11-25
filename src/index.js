@@ -1,16 +1,15 @@
-const cors = require('@fastify/cors');
-const routes = require('./routes.js');
-const config = require('./utils/config');
+const path = require('path');
 const fastify = require('fastify')({
   logger: true,
 });
+const routes = require('./routes');
+const config = require('./utils/config');
 
-const path = require('path')
 fastify.register(require('@fastify/static'), {
   root: path.join(__dirname, '../build'),
-})
+});
 
-/* 
+/*
 fastify.register(cors, {
   // put your options here
   origin: '*',

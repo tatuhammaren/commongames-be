@@ -15,7 +15,6 @@ async function getGames(userIds) {
   return Promise.all(proms);
 }
 async function getCommonGames(array) {
-
   const IdSets = array.map((a) => new Set(a.map((val) => val.appID)));
   const smallestArray = array
     .reduce((smallest, arr) => (smallest.length < arr.length ? smallest : arr));
@@ -26,7 +25,6 @@ async function getCommonGames(array) {
 }
 
 async function getData(userUrls) {
-  console.log(userUrls);
   const userIds = await getPlayersIds(userUrls);
   const players = await getInfo(userIds);
   const games = await getGames(userIds);
@@ -35,4 +33,4 @@ async function getData(userUrls) {
   return { players, games: commonGames };
 }
 
-module.exports = getData
+module.exports = getData;
